@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>InfodIn - Encuentra tu trabajo ideal</title>
+</head>
+
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 font-sans leading-normal text-white min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-md py-4 sticky top-0 z-50 border-b border-gray-800">
+    <div class="container mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="text-blue-400 text-2xl"><i class="fas fa-briefcase"></i></div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+          InfodIn</h1>
+      </div>
+      <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#features" class="text-gray-300 hover:text-white transition duration-200">Características</a>
+        <a href="#how-it-works" class="text-gray-300 hover:text-white transition duration-200">Cómo funciona</a>
+        <a href="#search" class="text-gray-300 hover:text-white transition duration-200">Buscar empleos</a>
+        <a href="#testimonials" class="text-gray-300 hover:text-white transition duration-200">Testimonios</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <section class="relative pt-16 pb-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 mix-blend-multiply"></div>
+      <div
+        class="absolute w-full h-full bg-[url('https://via.placeholder.com/1920x1080')] bg-cover bg-center opacity-20">
+      </div>
+    </div>
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            <span class="block">Ahorra tiempo en tu</span>
+            <span class="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">búsqueda de
+              empleo</span>
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">Conectamos las mejores ofertas de LinkedIn e InfoJobs en un solo
+            lugar. Encuentra tu trabajo ideal en minutos, no en días.</p>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#search"
+              class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium px-8 py-4 rounded-lg text-center transition duration-200 shadow-lg shadow-blue-500/20">
+              Buscar ahora
+            </a>
+            <a href="#how-it-works"
+              class="bg-gray-800 bg-opacity-50 hover:bg-opacity-70 border border-gray-700 text-white font-medium px-8 py-4 rounded-lg text-center transition duration-200">
+              Cómo funciona
+            </a>
+          </div>
+          <div class="mt-10 flex items-center text-gray-400">
+
+            <p class="ml-4 text-sm"><span class="text-white font-medium">x profesionales</span> encontraron
+              trabajo esta semana</p>
+          </div>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <div
+            class="bg-gray-900 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-2xl border border-gray-800 transform rotate-1 hover:rotate-0 transition duration-500">
+            <div class="flex justify-between items-center mb-6">
+              <div class="flex items-center space-x-2">
+                <div class="text-blue-400"><i class="fas fa-search"></i></div>
+                <h3 class="font-medium">Búsqueda rápida</h3>
+              </div>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Ofertas actualizadas en tiempo real</p>
+            <div class="bg-gray-800 p-4 rounded-lg mb-4">
+              <div class="flex items-center mb-4">
+                <input type="text" placeholder="Desarrollador Frontend"
+                  class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500">
+                <button class="ml-2 bg-blue-500 p-3 rounded-lg"><i class="fas fa-search"></i></button>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="bg-gray-700 px-2 py-1 rounded text-xs">React</span>
+                <span class="bg-gray-700 px-2 py-1 rounded text-xs">Barcelona</span>
+                <span class="bg-gray-700 px-2 py-1 rounded text-xs">+Remoto</span>
+                <span class="bg-blue-500 bg-opacity-20 text-blue-300 px-2 py-1 rounded text-xs">+ Filtros</span>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs text-gray-500 mb-3">
+              <span>Más relevantes</span>
+              <span>Publicados hoy</span>
+            </div>
+            <div class="space-y-3">
+              <div
+                class="bg-gray-800 p-3 rounded-lg border-l-4 border-blue-500 hover:bg-gray-750 transition duration-200">
+                <h4 class="font-medium text-blue-400">Senior Frontend Developer</h4>
+                <p class="text-sm text-gray-400">TechCorp · Madrid · 55-70K€</p>
+              </div>
+              <div
+                class="bg-gray-800 p-3 rounded-lg border-l-4 border-green-500 hover:bg-gray-750 transition duration-200">
+                <h4 class="font-medium text-blue-400">UX/UI Designer</h4>
+                <p class="text-sm text-gray-400">Creative Studio · Barcelona · 40-50K€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-gray-900 bg-opacity-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">¿Por qué usar InfodIn?</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Nuestro objetivo es simplificar tu búsqueda de empleo con
+          tecnología avanzada y funciones pensadas para profesionales.</p>
+      </div>
+
+      <div class="flex center gap-8">
+        <div
+          class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+          <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Búsqueda Unificada</h3>
+          <p class="text-gray-400">Combinamos las mejores ofertas de LinkedIn e InfoJobs para que no tengas que saltar
+            entre plataformas.</p>
+        </div>
+
+        <div
+          class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+          <div class="w-12 h-12 bg-indigo-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Ofertas Recientes</h3>
+          <p class="text-gray-400">Solo mostramos ofertas publicadas en las últimas 24 horas para aumentar tus
+            probabilidades de éxito.</p>
+        </div>
+
+
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-500 italic">Nos conectamos con las principales plataformas de empleo</p>
+        <div class="flex justify-center space-x-12 mt-6 opacity-60">
+          <span class="text-gray-400 text-xl font-bold">LinkedIn</span>
+          <span class="text-gray-400 text-xl font-bold">InfoJobs</span>
+          <span class="text-gray-400 text-xl font-bold">+ Próximamente más</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-16">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Cómo funciona</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Tres simples pasos para encontrar tu próximo trabajo.</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex flex-col items-center text-center md:w-1/4 mb-12 md:mb-0">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-2xl font-bold mb-6">1
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Busca por Término</h3>
+          <p class="text-gray-400">Ingresa tu especialidad, tecnología o puesto de trabajo deseado</p>
+        </div>
+
+        <div class="hidden md:block text-gray-700">
+          <svg width="80" height="24" viewBox="0 0 80 24">
+            <path d="M0 12 H80" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6"></path>
+            <!-- Mueve el triángulo a la derecha, pero mantiene la orientación apuntando hacia la izquierda -->
+            <path d="M0 12 L0 8 L0 16 Z" fill="currentColor"></path>
+          </svg>
+        </div>
+
+
+        <div class="flex flex-col items-center text-center md:w-1/4 mb-12 md:mb-0">
+          <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-2xl font-bold mb-6">2
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Filtra Resultados</h3>
+          <p class="text-gray-400">Personaliza los resultados según tus preferencias y necesidades</p>
+        </div>
+
+        <div class="hidden md:block text-gray-700">
+          <svg width="80" height="24" viewBox="0 0 80 24">
+            <path d="M0 12 H80" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6"></path>
+            <!-- Mueve el triángulo a la derecha, pero mantiene la orientación apuntando hacia la izquierda -->
+            <path d="M0 12 L0 8 L0 16 Z" fill="currentColor"></path>
+          </svg>
+        </div>
+
+        <div class="flex flex-col items-center text-center md:w-1/4">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-2xl font-bold mb-6">3
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Aplica Directamente</h3>
+          <p class="text-gray-400">Conéctate con la oferta original y aplica a los trabajos que te interesan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Area -->
+  <section id="search" class="py-16 bg-gray-900 bg-opacity-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Encuentra tu empleo ideal ahora</h2>
+          <p class="text-xl text-gray-400">Las ofertas más recientes de LinkedIn + InfoJobs en un solo lugar</p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
+          <div class="w-full relative mb-6">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <i class="fas fa-search text-gray-500"></i>
+            </div>
+            <input
+              class="w-full bg-gray-900 border border-gray-700 rounded-lg pl-10 px-4 py-4 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 focus:outline-none transition duration-200"
+              type="text" id="query" placeholder="¿Qué estás buscando? Ej: Developer, Marketing, Diseño...">
+          </div>
+
+          <button
+            class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium py-4 rounded-lg transition duration-200 shadow-lg shadow-blue-500/20"
+            id="searchBtn">Buscar empleos</button>
+        </div>
+      </div>
+
+      <div id="jobResults" class="mt-12">
+        <ul id="jobList" class="space-y-4">
+          <!-- Job items will be populated by JavaScript -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Lo que dicen nuestros usuarios</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Profesionales que encontraron su trabajo ideal usando
+          InfodIn</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-400">hace 2 semanas</span>
+          </div>
+          <p class="text-gray-300 mb-6">"Después de buscar durante meses, encontré mi trabajo ideal como desarrollador
+            en solo 3 días usando InfodIn. La función de búsqueda unificada me ahorró muchísimo tiempo."</p>
+          <div class="flex items-center">
+
+            <div>
+              <h4 class="font-medium">Carlos Martínez</h4>
+              <p class="text-sm text-gray-400">Frontend Developer @ TechCompany</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-400">hace 1 mes</span>
+          </div>
+          <p class="text-gray-300 mb-6">"La posibilidad de ver ofertas recientes de varias plataformas marcó la
+            diferencia. Pude aplicar antes que otros candidatos y conseguí una entrevista en menos de 24 horas."</p>
+          <div class="flex items-center">
+
+            <div>
+              <h4 class="font-medium">Laura Gómez</h4>
+              <p class="text-sm text-gray-400">UX Designer @ CreativeStudio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-400">hace 2 meses</span>
+          </div>
+          <p class="text-gray-300 mb-6">"Los filtros son realmente efectivos. Pude encontrar trabajos remotos con
+            tecnologías específicas que me interesaban. ¡Finalmente conseguí el trabajo de mis sueños!"</p>
+          <div class="flex items-center">
+
+            <div>
+              <h4 class="font-medium">Miguel Sánchez</h4>
+              <p class="text-sm text-gray-400">Backend Developer @ TechInnovation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
+    <div class="container mx-auto px-4 md:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para encontrar tu próximo trabajo?</h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Únete a los miles de profesionales que encuentran
+        oportunidades laborales cada día con InfodIn.</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#search"
+          class="bg-white text-blue-600 font-medium px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-200 shadow-lg">
+          Buscar ahora
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 pt-16 pb-10">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-800">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <div class="text-blue-400 text-xl"><i class="fas fa-briefcase"></i></div>
+            <h3 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+              InfodIn</h3>
+          </div>
+          <p class="text-gray-400 mb-6">Simplificando tu búsqueda de empleo desde 2024.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6">Plataforma</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Inicio</a></li>
+            <li><a href="#" class="hover:text-white transition">Buscar empleos</a></li>
+            <li><a href="#" class="hover:text-white transition">Características</a></li>
+            <li><a href="#" class="hover:text-white transition">Testimonios</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6">Empresa</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Sobre nosotros</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition">Contacto</a></li>
+            <li><a href="#" class="hover:text-white transition">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6">Suscríbete</h4>
+          <p class="text-gray-400 mb-4">Recibe alertas de empleos personalizadas</p>
+          <div class="flex">
+            <input type="email" placeholder="Tu email"
+              class="bg-gray-800 border border-gray-700 rounded-l-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 w-full">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 rounded-r-lg transition duration-200">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
+        <div>
+          &copy; 2025 InfodIn. Todos los derechos reservados.
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="#" class="hover:text-gray-400 transition">Términos y condiciones</a> ·
+          <a href="#" class="hover:text-gray-400 transition">Privacidad</a> ·
+          <a href="#" class="hover:text-gray-400 transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('searchBtn').addEventListener('click', async function () {
+      const query = document.getElementById('query').value || 'software';
+      const jobList = document.getElementById('jobList');
+
+      // Mostrar indicador de carga
+      jobList.innerHTML = '<li class="p-4 text-center"><div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div><p class="mt-2 text-gray-400">Buscando las mejores ofertas...</p></li>';
+
+      try {
+        // Hacer una solicitud al servidor Node.js que ejecuta Puppeteer
+        const response = await fetch(`http://localhost:3000/get-jobs?query=${query}`);
+
+        if (!response.ok) {
+          throw new Error('Error al obtener los trabajos');
+        }
+
+        const jobsObject = await response.json();
+        const jobs = jobsObject.linkedin.concat(jobsObject.infojobs);
+
+        jobList.innerHTML = ''; // Limpiar la lista
+
+        if (jobs.length === 0) {
+          jobList.innerHTML = `<li class="p-8 text-center bg-gray-800 rounded-lg border border-gray-700"> <div class="text-3xl mb-4 text-gray-500"><i class="fas fa-search"></i></div> <h3 class="text-xl font-medium mb-2">No encontramos ofertas para "${query}"</h3> <p class="text-gray-400 mb-4">Intenta con otros términos o amplía tu búsqueda</p> <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200" onclick="document.getElementById('searchInput').focus()"> Realizar nueva búsqueda </button> </li>`;
+        } else {
+          // Mostrar los empleos en la lista
+          jobs.forEach(job => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('p-5', 'bg-gray-900', 'border', 'border-gray-700', 'rounded-lg', 'shadow-md', 'hover:shadow-lg', 'transition-shadow', 'duration-200');
+            listItem.innerHTML = `
+              <a href="${job.link}" target="_blank" class="block">
+                <h2 class="text-xl font-semibold text-blue-400 hover:text-blue-300 mb-1">${job.title}</h2>
+                <p class="text-gray-300">${job.company} - <span class="text-gray-400">${job.location}</span></p>
+              </a>
+            `;
+            jobList.appendChild(listItem);
+          });
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+        document.getElementById('jobList').innerHTML = '<li class="p-4 text-center text-red-400 bg-gray-900 rounded-lg border border-gray-700">Error al cargar los trabajos. Por favor, intente de nuevo.</li>';
+      }
+    });
+  </script>
+</body>
+
+</html>
