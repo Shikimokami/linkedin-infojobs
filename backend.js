@@ -6,7 +6,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-const port = process.env.PORT || 3000; // Railway asigna un puerto dinámico
+const port = 8080 // Railway asigna un puerto dinámico
 
 // 🟢 Obtener el directorio actual
 const __filename = fileURLToPath(import.meta.url);
