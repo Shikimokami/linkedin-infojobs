@@ -401,7 +401,8 @@
 
       try {
         // Hacer una solicitud al servidor Node.js que ejecuta Puppeteer
-        const response = await fetch(`http://localhost:8080/get-jobs?query=${query}`);
+        const response = await fetch(`https://linkedin-infojobs-production.up.railway.app/get-jobs?query=${query}`);
+
 
         if (!response.ok) {
           throw new Error('Error al obtener los trabajos');
