@@ -25,8 +25,9 @@ puppeteer.use(StealthPlugin());
 app.get("/get-jobs", async (req, res) => {
   try {
     const browser = await puppeteer.launch({
-      headless: "new",
-      args: ["--no-sandbox", "--disable-setuid-sandbox"], // IMPORTANTE PARA RAILWAY
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      ignoreDefaultArgs: ['--disable-extensions']// IMPORTANTE PARA RAILWAY
     });
 
     const page = await browser.newPage();
