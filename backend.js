@@ -2,10 +2,11 @@ import express from "express";
 import puppeteer from "puppeteer-extra";
 import cors from "cors";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = 8080 // Railway asigna un puerto dinámico
-
 
 const generateRandomUA = () => {
   // Array of random user agents
@@ -33,26 +34,22 @@ const generateRandomUA = () => {
   return userAgents[randomUAIndex];
 }
 
+// 🟢 Obtener el directorio actual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static("public"));
+// 🟢 Servir archivos estáticos desde 'public'
+app.use(express.static(path.join(__dirname, "public")));
 
-// Habilitar CORS para todas las solicitudes
+// 🟢 Habilitar CORS
 app.use(cors());
 
+// 🟢 Configurar Puppeteer con Stealth
 puppeteer.use(StealthPlugin());
 
-// Ruta que se encargará de obtener los empleos de LinkedIn
+// 🟢 Ruta de scraping
 app.get("/get-jobs", async (req, res) => {
-  try {
-    console.log("Iniciando scraping...");
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      ignoreDefaultArgs: ['--disable-extensions']
-    });
-
-  const page1 = await browser.newPage();
+    const page1 = await browser.newPage();
   const query = req.query.query || "software"; // Recibe el query como parámetro
 
   const customUA = generateRandomUA();
@@ -113,7 +110,11 @@ app.get("/get-jobs", async (req, res) => {
   res.json(jobs);  // Devuelve los resultados como JSON
   console.log(customUA)
 
+});
 
+// 🟢 Servir `index.html`
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // 🟢 Iniciar Servidor
