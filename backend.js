@@ -24,29 +24,38 @@ puppeteer.use(StealthPlugin());
 // 🟢 Ruta de scraping
 app.get("/get-jobs", async (req, res) => {
   try {
+    console.log("Iniciando scraping...");
     const browser = await puppeteer.launch({
       headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      ignoreDefaultArgs: ['--disable-extensions']// IMPORTANTE PARA RAILWAY
+      ignoreDefaultArgs: ['--disable-extensions']
     });
 
     const page = await browser.newPage();
-    await page.goto("https://www.linkedin.com/jobs/search/", { waitUntil: "networkidle2" });
+    console.log("Navegando a LinkedIn...");
+    
+    // Aumenta el tiempo de espera y usa un selector para verificar si la página cargó correctamente
+    await page.goto("https://www.linkedin.com/jobs/search/", { waitUntil: "domcontentloaded" });
 
-    // Scraping aquí...
-    const jobs = await page.evaluate(() =>
-      Array.from(document.querySelectorAll(".job-result-card")).map((job) => ({
+    // Espera a que los resultados de los trabajos estén disponibles
+    await page.waitForSelector(".job-result-card", { timeout: 10000 });
+
+    // Scraping de los trabajos
+    const jobs = await page.evaluate(() => {
+      const jobElements = document.querySelectorAll(".job-result-card");
+      return Array.from(jobElements).map((job) => ({
         title: job.querySelector(".job-result-card__title")?.innerText || "No title",
         company: job.querySelector(".job-result-card__subtitle")?.innerText || "No company",
         link: job.querySelector(".job-result-card__title a")?.href || "No link",
-      }))
-    );
+      }));
+    });
 
     await browser.close();
+    console.log("Scraping completado, enviando respuesta...");
     res.json(jobs);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error en el scraping" });
+    console.error("Error en el scraping:", error);
+    res.status(500).json({ error: "Error en el scraping", details: error.message });
   }
 });
 
